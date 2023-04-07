@@ -219,19 +219,47 @@ namespace DataStructuresAssignment
         }
 
         /*---------------------------------------------- Linear Sort -------------------------------------------------*/
+        public class Song
+        {
+            public string Name { get; set; }
+            public string Artist { get; set; }
+            public string Streams { get; set; }
+            public string ReleaseDate { get; set; }
+            public int RowIndex { get; set; }
+
+            public Song(string name, string artist, string streams, string releaseDate, int rowIndex)
+            {
+                Name = name;
+                Artist = artist;
+                Streams = streams;
+                ReleaseDate = releaseDate;
+                RowIndex = rowIndex;
+            }
+        }
+
+        private SortedList<string, Song> songsList = new SortedList<string, Song>();
+
+        public SortedList<string, Song> SongsList
+        {
+            get { return songsList; }
+            set { songsList = value; }
+        }
+
         private void LenearSearchButton_Click(object sender, EventArgs e)
         {
             string searchTerm = LinearSearchTextBox.Text;
             bool searchResultFound = false;
 
-            foreach (DataGridViewRow currentRow in dataGridView1.Rows)
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
+                DataGridViewRow currentRow = dataGridView1.Rows[i];
                 string cellValue = currentRow.Cells["Streams (Billions)"].Value.ToString();
 
                 if (cellValue.Equals(searchTerm))
                 {
-                    currentRow.Selected = true;
-                    dataGridView1.CurrentCell = currentRow.Cells[0];
+                    dataGridView1.ClearSelection();
+                    dataGridView1.Rows[i].Selected = true;
+                    dataGridView1.CurrentCell = dataGridView1.Rows[i].Cells[0];
                     MessageBox.Show($"Song: {currentRow.Cells[0].Value.ToString()}\nArtist: {currentRow.Cells[1].Value.ToString()}\nStreams (Billions): {currentRow.Cells[2].Value.ToString()}\nRelease Date: {currentRow.Cells[3].Value.ToString()}");
                     searchResultFound = true;
                     break;
