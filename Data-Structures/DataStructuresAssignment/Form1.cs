@@ -25,13 +25,26 @@ namespace DataStructuresAssignment
             dataGridView1.Columns.Add("Streams (Billions)", "Streams (Billions)");
             dataGridView1.Columns.Add("Release Date", "Release Date");
 
-            //data = ShellSort(data);
 
             dataGridView1.Rows.Clear();
             foreach (string[] row in data)
             {
                 dataGridView1.Rows.Add(row);
             }
+
+            HashSet<string> artistNames = new HashSet<string>();
+
+            // Add each artist name to the HashSet
+            foreach (string[] row in data)
+            {
+                artistNames.Add(row[1]);
+            }
+
+            List<string> sortedArtistNames = artistNames.ToList();
+            sortedArtistNames.Sort();
+
+            // Display the sorted artist names in a ListBox control
+            ArtistListBox.DataSource = sortedArtistNames;
         }
         private List<string[]> LoadCSV(string filePath)
         {
@@ -52,7 +65,26 @@ namespace DataStructuresAssignment
             return data;
         }
 
+        // Hashset datastructures
+        private void HashSetExample()
+        {
+            string filePath = Path.Combine(Application.StartupPath, "Streams.csv");
+            List<string[]> data = LoadCSV(filePath);
 
+          
+            HashSet<string> artists = new HashSet<string>();
+
+            // Add each artist to the hash set
+            foreach (string[] row in data)
+            {
+                artists.Add(row[1]);
+            }
+
+            // Display the number of unique artists
+            MessageBox.Show($"Number of unique artists: {artists.Count}");
+        }
+
+        // Binary search algorithm
         private void SearchBwutton_Click(object sender, EventArgs e)
         {
             string searchTerm = SearchTextBox.Text.Trim();

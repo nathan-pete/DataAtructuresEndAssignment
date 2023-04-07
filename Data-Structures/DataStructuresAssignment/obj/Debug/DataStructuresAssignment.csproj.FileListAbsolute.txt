@@ -75,3 +75,14 @@ C:\Users\Nathan\Desktop\Data-StructuresWORKING\Data-Structures\DataStructuresAss
 C:\Users\Nathan\Desktop\Data-StructuresWORKING\Data-Structures\DataStructuresAssignment\obj\Debug\DataStructuresAssignment.csproj.CoreCompileInputs.cache
 C:\Users\Nathan\Desktop\Data-StructuresWORKING\Data-Structures\DataStructuresAssignment\obj\Debug\DataStructuresAssignment.exe
 C:\Users\Nathan\Desktop\Data-StructuresWORKING\Data-Structures\DataStructuresAssignment\obj\Debug\DataStructuresAssignment.pdb
+C:\Users\User\DataAtructuresEndAssignment\Data-Structures\DataStructuresAssignment\bin\Debug\DataStructuresAssignment.exe.config
+C:\Users\User\DataAtructuresEndAssignment\Data-Structures\DataStructuresAssignment\bin\Debug\DataStructuresAssignment.exe
+C:\Users\User\DataAtructuresEndAssignment\Data-Structures\DataStructuresAssignment\bin\Debug\DataStructuresAssignment.pdb
+C:\Users\User\DataAtructuresEndAssignment\Data-Structures\DataStructuresAssignment\obj\Debug\DataStructuresAssignment.csproj.AssemblyReference.cache
+C:\Users\User\DataAtructuresEndAssignment\Data-Structures\DataStructuresAssignment\obj\Debug\DataStructuresAssignment.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\DataAtructuresEndAssignment\Data-Structures\DataStructuresAssignment\obj\Debug\DataStructuresAssignment.Form1.resources
+C:\Users\User\DataAtructuresEndAssignment\Data-Structures\DataStructuresAssignment\obj\Debug\DataStructuresAssignment.Properties.Resources.resources
+C:\Users\User\DataAtructuresEndAssignment\Data-Structures\DataStructuresAssignment\obj\Debug\DataStructuresAssignment.csproj.GenerateResource.cache
+C:\Users\User\DataAtructuresEndAssignment\Data-Structures\DataStructuresAssignment\obj\Debug\DataStructuresAssignment.csproj.CoreCompileInputs.cache
+C:\Users\User\DataAtructuresEndAssignment\Data-Structures\DataStructuresAssignment\obj\Debug\DataStructuresAssignment.exe
+C:\Users\User\DataAtructuresEndAssignment\Data-Structures\DataStructuresAssignment\obj\Debug\DataStructuresAssignment.pdb
