@@ -41,13 +41,14 @@
             this.bucketSortButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.ArtistListBox = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 91);
+            this.dataGridView1.Location = new System.Drawing.Point(554, 90);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
@@ -60,7 +61,7 @@
             this.mainLabel.AutoSize = true;
             this.mainLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainLabel.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.mainLabel.Location = new System.Drawing.Point(285, 34);
+            this.mainLabel.Location = new System.Drawing.Point(473, 29);
             this.mainLabel.Name = "mainLabel";
             this.mainLabel.Size = new System.Drawing.Size(222, 29);
             this.mainLabel.TabIndex = 1;
@@ -69,40 +70,40 @@
             // SearchButton
             // 
             this.SearchButton.BackColor = System.Drawing.Color.DarkOrchid;
-            this.SearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SearchButton.ForeColor = System.Drawing.Color.White;
-            this.SearchButton.Location = new System.Drawing.Point(816, 170);
+            this.SearchButton.Location = new System.Drawing.Point(308, 127);
             this.SearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(192, 34);
+            this.SearchButton.Size = new System.Drawing.Size(217, 34);
             this.SearchButton.TabIndex = 2;
-            this.SearchButton.Text = "Song Binary Search";
+            this.SearchButton.Text = "song binary search";
             this.SearchButton.UseVisualStyleBackColor = false;
             this.SearchButton.Click += new System.EventHandler(this.SearchBwutton_Click);
             // 
             // SearchTextBox
             // 
             this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SearchTextBox.Location = new System.Drawing.Point(816, 124);
+            this.SearchTextBox.Location = new System.Drawing.Point(28, 132);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(242, 26);
+            this.SearchTextBox.Size = new System.Drawing.Size(264, 26);
             this.SearchTextBox.TabIndex = 3;
             // 
             // searchSongName
             // 
             this.searchSongName.AutoSize = true;
             this.searchSongName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchSongName.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.searchSongName.Location = new System.Drawing.Point(812, 91);
+            this.searchSongName.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.searchSongName.Location = new System.Drawing.Point(24, 99);
             this.searchSongName.Name = "searchSongName";
-            this.searchSongName.Size = new System.Drawing.Size(268, 20);
+            this.searchSongName.Size = new System.Drawing.Size(161, 20);
             this.searchSongName.TabIndex = 4;
-            this.searchSongName.Text = "Enter a name of song for search";
+            this.searchSongName.Text = "Enter a song name";
             // 
             // AddRowButton
             // 
-            this.AddRowButton.Location = new System.Drawing.Point(28, 456);
+            this.AddRowButton.Location = new System.Drawing.Point(554, 482);
             this.AddRowButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddRowButton.Name = "AddRowButton";
             this.AddRowButton.Size = new System.Drawing.Size(75, 40);
@@ -113,10 +114,10 @@
             // 
             // RemoveRowButton
             // 
-            this.RemoveRowButton.Location = new System.Drawing.Point(137, 456);
+            this.RemoveRowButton.Location = new System.Drawing.Point(649, 482);
             this.RemoveRowButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RemoveRowButton.Name = "RemoveRowButton";
-            this.RemoveRowButton.Size = new System.Drawing.Size(128, 40);
+            this.RemoveRowButton.Size = new System.Drawing.Size(138, 40);
             this.RemoveRowButton.TabIndex = 6;
             this.RemoveRowButton.Text = "Remove row";
             this.RemoveRowButton.UseVisualStyleBackColor = true;
@@ -127,54 +128,56 @@
             this.LinearSearchButton.BackColor = System.Drawing.Color.DarkOrchid;
             this.LinearSearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinearSearchButton.ForeColor = System.Drawing.Color.White;
-            this.LinearSearchButton.Location = new System.Drawing.Point(816, 406);
+            this.LinearSearchButton.Location = new System.Drawing.Point(311, 223);
             this.LinearSearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LinearSearchButton.Name = "LinearSearchButton";
             this.LinearSearchButton.Size = new System.Drawing.Size(214, 34);
             this.LinearSearchButton.TabIndex = 8;
-            this.LinearSearchButton.Text = "Streams Linear Search";
+            this.LinearSearchButton.Text = "streams liner search ";
             this.LinearSearchButton.UseVisualStyleBackColor = false;
             this.LinearSearchButton.Click += new System.EventHandler(this.LenearSearchButton_Click);
             // 
             // LinearSearchTextBox
             // 
             this.LinearSearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LinearSearchTextBox.Location = new System.Drawing.Point(816, 365);
+            this.LinearSearchTextBox.Location = new System.Drawing.Point(28, 229);
             this.LinearSearchTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LinearSearchTextBox.Name = "LinearSearchTextBox";
-            this.LinearSearchTextBox.Size = new System.Drawing.Size(242, 26);
+            this.LinearSearchTextBox.Size = new System.Drawing.Size(264, 26);
             this.LinearSearchTextBox.TabIndex = 9;
             // 
             // searchStreamsLabel
             // 
             this.searchStreamsLabel.AutoSize = true;
             this.searchStreamsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchStreamsLabel.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.searchStreamsLabel.Location = new System.Drawing.Point(812, 329);
+            this.searchStreamsLabel.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.searchStreamsLabel.Location = new System.Drawing.Point(24, 189);
             this.searchStreamsLabel.Name = "searchStreamsLabel";
-            this.searchStreamsLabel.Size = new System.Drawing.Size(355, 20);
+            this.searchStreamsLabel.Size = new System.Drawing.Size(202, 20);
             this.searchStreamsLabel.TabIndex = 10;
-            this.searchStreamsLabel.Text = "Enter a streams number for jump searching";
+            this.searchStreamsLabel.Text = "Enter a streams number";
             // 
             // bucketSortButton
             // 
-            this.bucketSortButton.Location = new System.Drawing.Point(554, 452);
+            this.bucketSortButton.Font = new System.Drawing.Font("Circular Std Black", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bucketSortButton.Location = new System.Drawing.Point(24, 313);
             this.bucketSortButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bucketSortButton.Name = "bucketSortButton";
-            this.bucketSortButton.Size = new System.Drawing.Size(202, 49);
+            this.bucketSortButton.Size = new System.Drawing.Size(161, 49);
             this.bucketSortButton.TabIndex = 11;
-            this.bucketSortButton.Text = "BucketSortButton";
+            this.bucketSortButton.Text = "Sort Artist ASC";
             this.bucketSortButton.UseVisualStyleBackColor = true;
             this.bucketSortButton.Click += new System.EventHandler(this.BucketSortButton_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(323, 452);
+            this.button1.Font = new System.Drawing.Font("Circular Std Black", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(191, 313);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(202, 49);
+            this.button1.Size = new System.Drawing.Size(165, 49);
             this.button1.TabIndex = 12;
-            this.button1.Text = "StreamSortButton";
+            this.button1.Text = "Sort Streams";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.StreamSortButton_Click);
             // 
@@ -182,10 +185,20 @@
             // 
             this.ArtistListBox.FormattingEnabled = true;
             this.ArtistListBox.ItemHeight = 20;
-            this.ArtistListBox.Location = new System.Drawing.Point(860, 537);
+            this.ArtistListBox.Location = new System.Drawing.Point(964, 440);
             this.ArtistListBox.Name = "ArtistListBox";
             this.ArtistListBox.Size = new System.Drawing.Size(120, 84);
             this.ArtistListBox.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Circular Std Black", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(550, 440);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(354, 23);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Tap to add/remove the row to the table :)";
             // 
             // Form1
             // 
@@ -193,6 +206,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1443, 644);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ArtistListBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.bucketSortButton);
@@ -233,5 +247,6 @@
         private System.Windows.Forms.Label searchStreamsLabel;
         private System.Windows.Forms.Button bucketSortButton;
         private System.Windows.Forms.ListBox ArtistListBox;
+        private System.Windows.Forms.Label label1;
     }
 }
