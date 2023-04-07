@@ -14,6 +14,14 @@ namespace DataStructuresAssignment
         {
             InitializeComponent();
         }
+        private HashSet<string> artistNames = new HashSet<string>();
+
+        public HashSet<string> ArtistNames
+        {
+            get { return artistNames; }
+            set { artistNames = value; }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             string filePath = Path.Combine(Application.StartupPath, "Streams.csv");
@@ -25,16 +33,13 @@ namespace DataStructuresAssignment
             dataGridView1.Columns.Add("Streams (Billions)", "Streams (Billions)");
             dataGridView1.Columns.Add("Release Date", "Release Date");
 
-
             dataGridView1.Rows.Clear();
             foreach (string[] row in data)
             {
                 dataGridView1.Rows.Add(row);
             }
 
-            HashSet<string> artistNames = new HashSet<string>();
-
-            // Add artist name to HashSet
+            // Add each artist name to the HashSet
             foreach (string[] row in data)
             {
                 artistNames.Add(row[1]);
@@ -43,9 +48,10 @@ namespace DataStructuresAssignment
             List<string> sortedArtistNames = artistNames.ToList();
             sortedArtistNames.Sort();
 
-            // Display the sorted artist names 
+            // Display the sorted artist names in a ListBox control
             ArtistListBox.DataSource = sortedArtistNames;
         }
+
         private List<string[]> LoadCSV(string filePath)
         {
             List<string[]> data = new List<string[]>();
@@ -71,10 +77,9 @@ namespace DataStructuresAssignment
             string filePath = Path.Combine(Application.StartupPath, "Streams.csv");
             List<string[]> data = LoadCSV(filePath);
 
-   
             HashSet<string> artists = new HashSet<string>();
 
-       
+            // Add each artist to the hash set
             foreach (string[] row in data)
             {
                 artists.Add(row[1]);
@@ -82,6 +87,9 @@ namespace DataStructuresAssignment
 
             // Display the number of unique artists
             MessageBox.Show($"Number of unique artists: {artists.Count}");
+
+            // Set the ArtistNames property
+            ArtistNames = artists;
         }
 
         // Binary search algorithm
