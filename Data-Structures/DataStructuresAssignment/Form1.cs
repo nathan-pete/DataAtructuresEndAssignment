@@ -360,6 +360,11 @@ namespace DataStructuresAssignment
                 dataGridView1.Rows[x].Cells[2].Value = data[x]; //Sets the 3rd column to the sorted data
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 
