@@ -43,18 +43,19 @@
             this.ArtistListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(554, 90);
+            this.dataGridView1.Location = new System.Drawing.Point(588, 78);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(728, 320);
+            this.dataGridView1.Size = new System.Drawing.Size(778, 320);
             this.dataGridView1.TabIndex = 0;
             // 
             // mainLabel
@@ -104,7 +105,7 @@
             // 
             // AddRowButton
             // 
-            this.AddRowButton.Location = new System.Drawing.Point(554, 482);
+            this.AddRowButton.Location = new System.Drawing.Point(588, 465);
             this.AddRowButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddRowButton.Name = "AddRowButton";
             this.AddRowButton.Size = new System.Drawing.Size(75, 40);
@@ -115,7 +116,7 @@
             // 
             // RemoveRowButton
             // 
-            this.RemoveRowButton.Location = new System.Drawing.Point(649, 482);
+            this.RemoveRowButton.Location = new System.Drawing.Point(687, 465);
             this.RemoveRowButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RemoveRowButton.Name = "RemoveRowButton";
             this.RemoveRowButton.Size = new System.Drawing.Size(138, 40);
@@ -186,16 +187,16 @@
             // 
             this.ArtistListBox.FormattingEnabled = true;
             this.ArtistListBox.ItemHeight = 20;
-            this.ArtistListBox.Location = new System.Drawing.Point(949, 482);
+            this.ArtistListBox.Location = new System.Drawing.Point(974, 447);
             this.ArtistListBox.Name = "ArtistListBox";
-            this.ArtistListBox.Size = new System.Drawing.Size(184, 144);
+            this.ArtistListBox.Size = new System.Drawing.Size(153, 144);
             this.ArtistListBox.TabIndex = 13;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Circular Std Black", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(550, 440);
+            this.label1.Location = new System.Drawing.Point(584, 421);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(354, 23);
             this.label1.TabIndex = 14;
@@ -205,11 +206,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Circular Std Light", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(944, 440);
+            this.label2.Location = new System.Drawing.Point(981, 419);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 25);
             this.label2.TabIndex = 15;
             this.label2.Text = "Unique artists ";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(1168, 447);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(198, 144);
+            this.listBox1.TabIndex = 16;
             // 
             // Form1
             // 
@@ -217,6 +227,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1443, 644);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ArtistListBox);
@@ -261,5 +272,6 @@
         private System.Windows.Forms.ListBox ArtistListBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

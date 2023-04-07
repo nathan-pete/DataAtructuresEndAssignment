@@ -22,10 +22,44 @@ namespace DataStructuresAssignment
             set { artistNames = value; }
         }
 
+        public class DateNode
+        {
+            public DateTime Value { get; set; }
+            public DateNode Next { get; set; }
+        }
+
+        private DateNode LoadDates(string filePath)
+        {
+            DateNode head = null;
+            DateNode tail = null;
+            using (var reader = new StreamReader(filePath))
+            {
+                while (!reader.EndOfStream)
+                {
+                    string line = reader.ReadLine();
+                    string[] values = line.Split(',');
+                    DateTime dateValue = DateTime.Parse(values[3]); // Parse the date string into a DateTime object
+                    DateNode newNode = new DateNode { Value = dateValue }; // Create a new DateNode with the parsed value
+                    if (head == null) // If this is the first node, set it as the head
+                    {
+                        head = newNode;
+                    }
+                    if (tail != null) 
+                    {
+                        tail.Next = newNode;
+                    }
+                    tail = newNode; 
+                }
+            }
+            return head;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             string filePath = Path.Combine(Application.StartupPath, "Streams.csv");
             List<string[]> data = LoadCSV(filePath);
+            DateNode dates = LoadDates(filePath); // Load the dates using the new method
+
 
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.Columns.Add("Song", "Song");
@@ -50,6 +84,15 @@ namespace DataStructuresAssignment
 
             // Display the sorted artist names in a ListBox control
             ArtistListBox.DataSource = sortedArtistNames;
+
+            // Clear the ListBox and add each date to it
+            listBox1.Items.Clear();
+            DateNode currentNode = dates;
+            while (currentNode != null)
+            {
+                listBox1.Items.Add(currentNode.Value.ToShortDateString());
+                currentNode = currentNode.Next;
+            }
         }
 
         private List<string[]> LoadCSV(string filePath)
