@@ -7,7 +7,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab4d3577-8630-4680-a0e9-0b494c8ca5fa" name="Changes" comment="" />
+    <list default="true" id="ab4d3577-8630-4680-a0e9-0b494c8ca5fa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataStructuresAssignment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataStructuresAssignment/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStructuresAssignment/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataStructuresAssignment/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStructuresAssignment/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataStructuresAssignment/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStructuresAssignment/bin/Debug/DataStructuresAssignment.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DataStructuresAssignment/bin/Debug/DataStructuresAssignment.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStructuresAssignment/bin/Debug/DataStructuresAssignment.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataStructuresAssignment/bin/Debug/DataStructuresAssignment.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStructuresAssignment/bin/Debug/Streams.csv" beforeDir="false" afterPath="$PROJECT_DIR$/DataStructuresAssignment/bin/Debug/Streams.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStructuresAssignment/obj/Debug/DataStructuresAssignment.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DataStructuresAssignment/obj/Debug/DataStructuresAssignment.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStructuresAssignment/obj/Debug/DataStructuresAssignment.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataStructuresAssignment/obj/Debug/DataStructuresAssignment.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +24,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
   <component name="RunManager">

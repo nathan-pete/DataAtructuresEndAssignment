@@ -268,11 +268,11 @@ namespace DataStructuresAssignment
             foreach (string[] row in sortedData)
             {
                 dataGridView1.Rows.Add(row);
-                bucketSortTime.Stop();
-                TimeSpan bucketSortTimeElapsed = (bucketSortTime.Elapsed);
-                MessageBox.Show($"Time elapsed: {bucketSortTimeElapsed.TotalSeconds} seconds");
-                break;
+                
             }
+            bucketSortTime.Stop();
+            TimeSpan bucketSortTimeElapsed = (bucketSortTime.Elapsed);
+            MessageBox.Show($"Time elapsed: {bucketSortTimeElapsed.TotalSeconds} seconds");
         }
 
         /*---------------------------------------------- Linear Sort -------------------------------------------------*/
@@ -386,11 +386,10 @@ namespace DataStructuresAssignment
             for (int x = 0; x < dataGridView1.Rows.Count & x < data.Length; x++)
             {
                 dataGridView1.Rows[x].Cells[2].Value = data[x]; //Sets the 3rd column to the sorted data
-                bubbleSortTime.Stop();
-                TimeSpan bubbleSortTimeElapsed = (bubbleSortTime.Elapsed);
-                MessageBox.Show($"Time elapsed: {bubbleSortTimeElapsed.TotalSeconds} seconds");
-                break;
             }
+            bubbleSortTime.Stop();
+            TimeSpan bubbleSortTimeElapsed = (bubbleSortTime.Elapsed);
+            MessageBox.Show($"Time elapsed: {bubbleSortTimeElapsed.TotalSeconds} seconds");
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

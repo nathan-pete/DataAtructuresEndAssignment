@@ -192,7 +192,7 @@
             this.ArtistListBox.FormattingEnabled = true;
             this.ArtistListBox.ItemHeight = 25;
             this.ArtistListBox.Location = new System.Drawing.Point(1299, 559);
-            this.ArtistListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ArtistListBox.Margin = new System.Windows.Forms.Padding(4);
             this.ArtistListBox.Name = "ArtistListBox";
             this.ArtistListBox.Size = new System.Drawing.Size(203, 179);
             this.ArtistListBox.TabIndex = 13;
@@ -224,7 +224,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 25;
             this.listBox1.Location = new System.Drawing.Point(1557, 559);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(263, 179);
             this.listBox1.TabIndex = 16;
@@ -259,7 +259,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         private System.Windows.Forms.Button button1;
