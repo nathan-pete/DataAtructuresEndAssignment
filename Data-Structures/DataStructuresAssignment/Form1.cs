@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 using System.IO;
@@ -129,14 +130,14 @@ namespace DataStructuresAssignment
                 artists.Add(row[1]);
             }
 
-            // Display the number of unique artists
+            //Display the number of unique artists
             MessageBox.Show($"Number of unique artists: {artists.Count}");
 
             // Set the ArtistNames property
             ArtistNames = artists;
         }
 
-        // Binary search algorithm
+        //Binary search algorithm
         private void SearchBwutton_Click(object sender, EventArgs e)
         {
             string searchTerm = SearchTextBox.Text.Trim();
@@ -145,16 +146,22 @@ namespace DataStructuresAssignment
             {
                 string filePath = Path.Combine(Application.StartupPath, "Streams.csv");
                 List<string[]> data = LoadCSV(filePath);
-
+                
+                Stopwatch binaryTime = new Stopwatch();
+                binaryTime.Start();
                 string[] result = BinarySearch(data, searchTerm);
 
                 if (result != null)
                 {
-                    MessageBox.Show($"Song: {result[0]}\nArtist: {result[1]}\nStreams (Billions): {result[2]}\nRelease Date: {result[3]}");
+                    binaryTime.Stop();
+                    TimeSpan binaryTimeElapsed = (binaryTime.Elapsed);
+                    MessageBox.Show($"Song: {result[0]}\nArtist: {result[1]}\nStreams (Billions): {result[2]}\nRelease Date: {result[3]}\nTime elapsed: {binaryTimeElapsed.TotalSeconds} seconds");
                 }
                 else
                 {
-                    MessageBox.Show("Not found");
+                    binaryTime.Stop();
+                    TimeSpan binaryTimeElapsed = binaryTime.Elapsed;
+                    MessageBox.Show($"Not found\nTime elapsed: {binaryTimeElapsed.TotalSeconds} seconds");
                 }
             }
         }
@@ -233,6 +240,8 @@ namespace DataStructuresAssignment
             // Create a dictionary to store the buckets
             Dictionary<string, List<string[]>> buckets = new Dictionary<string, List<string[]>>();
 
+            Stopwatch bucketSortTime = new Stopwatch();
+            bucketSortTime.Start();
             // Iterate over each row in the data and add it to the appropriate bucket
             foreach (string[] row in data)
             {
@@ -259,6 +268,10 @@ namespace DataStructuresAssignment
             foreach (string[] row in sortedData)
             {
                 dataGridView1.Rows.Add(row);
+                bucketSortTime.Stop();
+                TimeSpan bucketSortTimeElapsed = (bucketSortTime.Elapsed);
+                MessageBox.Show($"Time elapsed: {bucketSortTimeElapsed.TotalSeconds} seconds");
+                break;
             }
         }
 
@@ -293,7 +306,9 @@ namespace DataStructuresAssignment
         {
             string searchTerm = LinearSearchTextBox.Text;
             bool searchResultFound = false;
-
+            
+            Stopwatch linearTime = new Stopwatch();
+            linearTime.Start();
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 DataGridViewRow currentRow = dataGridView1.Rows[i];
@@ -304,15 +319,26 @@ namespace DataStructuresAssignment
                     dataGridView1.ClearSelection();
                     dataGridView1.Rows[i].Selected = true;
                     dataGridView1.CurrentCell = dataGridView1.Rows[i].Cells[0];
-                    MessageBox.Show($"Song: {currentRow.Cells[0].Value.ToString()}\nArtist: {currentRow.Cells[1].Value.ToString()}\nStreams (Billions): {currentRow.Cells[2].Value.ToString()}\nRelease Date: {currentRow.Cells[3].Value.ToString()}");
+                    linearTime.Stop();
+                    TimeSpan linearTimeElapsed = (linearTime.Elapsed);
+                    MessageBox.Show($"Song: {currentRow.Cells[0].Value.ToString()}\nArtist: {currentRow.Cells[1].Value.ToString()}\nStreams (Billions): {currentRow.Cells[2].Value.ToString()}\nRelease Date: {currentRow.Cells[3].Value.ToString()}\nTime elapsed: {linearTimeElapsed.TotalSeconds} seconds");
                     searchResultFound = true;
+                    break;
+                }
+                else
+                {
+                    linearTime.Stop();
+                    TimeSpan linearTimeElapsed = (linearTime.Elapsed);
+                    MessageBox.Show($"The search result wasn't found, try again.\nTime elapsed: {linearTimeElapsed.TotalSeconds} seconds");
                     break;
                 }
             }
 
             if (!searchResultFound)
             {
-                MessageBox.Show("The search result wasn't found, try again.");
+                linearTime.Stop();
+                TimeSpan linearTimeElapsed = (linearTime.Elapsed);
+                MessageBox.Show($"The search result wasn't found, try again.\nTime elapsed: {linearTimeElapsed.TotalSeconds} seconds");
             }
         }
 
@@ -340,6 +366,8 @@ namespace DataStructuresAssignment
                 data[x] = float.Parse(lines[x]); //Converts the string to a float
             }
 
+            Stopwatch bubbleSortTime = new Stopwatch();
+            bubbleSortTime.Start();
             // Bubble sort Algorithm
             for (int x = 0; x < data.Length - 1; x++)
             {
@@ -358,6 +386,10 @@ namespace DataStructuresAssignment
             for (int x = 0; x < dataGridView1.Rows.Count & x < data.Length; x++)
             {
                 dataGridView1.Rows[x].Cells[2].Value = data[x]; //Sets the 3rd column to the sorted data
+                bubbleSortTime.Stop();
+                TimeSpan bubbleSortTimeElapsed = (bubbleSortTime.Elapsed);
+                MessageBox.Show($"Time elapsed: {bubbleSortTimeElapsed.TotalSeconds} seconds");
+                break;
             }
         }
 
@@ -367,4 +399,3 @@ namespace DataStructuresAssignment
         }
     }
 }
-
