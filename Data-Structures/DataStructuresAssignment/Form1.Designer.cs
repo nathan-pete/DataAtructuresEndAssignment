@@ -42,7 +42,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.ArtistListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -186,9 +185,9 @@
             // 
             this.ArtistListBox.FormattingEnabled = true;
             this.ArtistListBox.ItemHeight = 20;
-            this.ArtistListBox.Location = new System.Drawing.Point(952, 482);
+            this.ArtistListBox.Location = new System.Drawing.Point(964, 440);
             this.ArtistListBox.Name = "ArtistListBox";
-            this.ArtistListBox.Size = new System.Drawing.Size(120, 144);
+            this.ArtistListBox.Size = new System.Drawing.Size(120, 84);
             this.ArtistListBox.TabIndex = 13;
             // 
             // label1
@@ -201,23 +200,12 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Tap to add/remove the row to the table :)";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Circular Std Light", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(947, 438);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 25);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Unique artists";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1443, 644);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ArtistListBox);
             this.Controls.Add(this.button1);
@@ -260,6 +248,5 @@
         private System.Windows.Forms.Button bucketSortButton;
         private System.Windows.Forms.ListBox ArtistListBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
     }
 }

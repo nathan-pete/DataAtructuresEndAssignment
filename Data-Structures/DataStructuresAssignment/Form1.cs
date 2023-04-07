@@ -222,24 +222,25 @@ namespace DataStructuresAssignment
         private void LenearSearchButton_Click(object sender, EventArgs e)
         {
             string searchTerm = LinearSearchTextBox.Text;
+            bool searchResultFound = false;
 
-            foreach (DataGridViewRow currentRow in dataGridView1.Rows) // iterate through every row one row at a time
+            foreach (DataGridViewRow currentRow in dataGridView1.Rows)
             {
-                string cellValue = currentRow.Cells["Streams (Billions)"].Value.ToString(); //cell value of the row streams
+                string cellValue = currentRow.Cells["Streams (Billions)"].Value.ToString();
 
-                if (cellValue.Equals(searchTerm)) // compare cell value of the current row to the search term
+                if (cellValue.Equals(searchTerm))
                 {
-                    currentRow.Selected = true; //highlight the row of the search term
+                    currentRow.Selected = true;
                     dataGridView1.CurrentCell = currentRow.Cells[0];
-                    MessageBox.Show($"Song: {currentRow.Cells[0].Value.ToString()}\nArtist: {currentRow.Cells[1].Value.ToString()}\nStreams (Billions): {currentRow.Cells[2].Value.ToString()}\nRelease Date: {currentRow.Cells[3].Value.ToString()}"); //display whole row of the search term
+                    MessageBox.Show($"Song: {currentRow.Cells[0].Value.ToString()}\nArtist: {currentRow.Cells[1].Value.ToString()}\nStreams (Billions): {currentRow.Cells[2].Value.ToString()}\nRelease Date: {currentRow.Cells[3].Value.ToString()}");
+                    searchResultFound = true;
                     break;
                 }
-                else
-                {
-                    MessageBox.Show("The search result wasn't found, try again.");
-                    break;
-                }
+            }
 
+            if (!searchResultFound)
+            {
+                MessageBox.Show("The search result wasn't found, try again.");
             }
         }
 
