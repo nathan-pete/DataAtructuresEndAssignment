@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.IO;
 
 namespace DataStructuresAssignment
 {
@@ -14,14 +14,15 @@ namespace DataStructuresAssignment
         {
             InitializeComponent();
         }
-        private HashSet<string> artistNames = new HashSet<string>();
 
+        /*----------------------------------------------- Hashset data structure -----------------------------------------*/
+        private HashSet<string> artistNames = new HashSet<string>();
         public HashSet<string> ArtistNames
         {
             get { return artistNames; }
             set { artistNames = value; }
         }
-
+        /*----------------------------------------------- Linked list data structure -----------------------------------------*/
         public class DateNode
         {
             public DateTime Value { get; set; }

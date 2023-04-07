@@ -135,7 +135,7 @@
             this.LinearSearchButton.Name = "LinearSearchButton";
             this.LinearSearchButton.Size = new System.Drawing.Size(214, 44);
             this.LinearSearchButton.TabIndex = 8;
-            this.LinearSearchButton.Text = "streams liner search ";
+            this.LinearSearchButton.Text = "streams linear search ";
             this.LinearSearchButton.UseVisualStyleBackColor = false;
             this.LinearSearchButton.Click += new System.EventHandler(this.LenearSearchButton_Click);
             // 
